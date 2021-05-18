@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}<link rel="stylesheet" href="{{asset( "css/catalog.css")}}">{% endblock %}
+
+{% block title %}Cake index{% endblock %}
+
+{% block body %}
+<style>
+    
+</style>
+    <h1>Cake index</h1>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Description</th>
+                <th>Price</th>
+                <th>ImageFilename</th>
+                <th>actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cake in cakes %}
+            <tr>
+                <td>{{ cake.id }}</td>
+                <td>{{ cake.name }}</td>
+                <td>{{ cake.description }}</td>
+                <td>{{ cake.price }}</td>
+                <td> 
+                 <img src="{{ asset('uploads/'  ~ cake.imageFilename) }}"/>
+                 </td>
+                <td>
+                    <a href="{{ path('catalog_show', {'id': cake.id}) }}">show</a>
+                     <a href="{{ path('cart_add', {'id': cake.id}) }}">buy</a>
+
+        
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Cake{% endblock %}
+
+{% block body %}
+    <h1>Edit Cake</h1>
+
+    {{ include('admin_cake/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_cake_index') }}">back to list</a>
+
+    {{ include('admin_cake/_delete_form.html.twig') }}
+{% endblock %}

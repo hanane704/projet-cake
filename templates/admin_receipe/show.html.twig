@@ -1,0 +1,30 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Receipe{% endblock %}
+
+{% block body %}
+    <h1>Receipe</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ receipe.id }}</td>
+            </tr>
+            <tr>
+                <th>Title</th>
+                <td>{{ receipe.title }}</td>
+            </tr>
+            <tr>
+                <th>Content</th>
+                <td>{{ receipe.content }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('admin_receipe_index') }}">back to list</a>
+
+    <a href="{{ path('admin_receipe_edit', {'id': receipe.id}) }}">edit</a>
+
+    {{ include('admin_receipe/_delete_form.html.twig') }}
+{% endblock %}

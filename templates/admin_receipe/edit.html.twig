@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit Receipe{% endblock %}
+
+{% block body %}
+    <h1>Edit Receipe</h1>
+
+    {{ include('admin_receipe/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_receipe_index') }}">back to list</a>
+
+    {{ include('admin_receipe/_delete_form.html.twig') }}
+{% endblock %}

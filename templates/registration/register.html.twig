@@ -1,0 +1,35 @@
+{% extends 'base.html.twig' %}
+
+{% block css %}<link rel="stylesheet" href="{{asset( "css/register.css")}}">{% endblock %}
+
+{% block title %}Register{% endblock %}
+
+{% block body %}
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class="alert alert-danger" role="alert">{{ flashError }}</div>
+    {% endfor %}
+
+    <h1>Register</h1>
+<div class="login-wrap">
+	<div class="login-html">
+
+    {{ form_start(registrationForm) }}
+        {{ form_row(registrationForm.fullname) }}
+        {{ form_row(registrationForm.email) }}
+        {{ form_row(registrationForm.plainPassword, {
+ label: 'Password'
+        }) }}
+        {{ form_row(registrationForm.street) }}
+        {{ form_row(registrationForm.postalCD) }}
+        {{ form_row(registrationForm.city) }}
+         {{ form_row(registrationForm.country) }}
+
+        
+        {{ form_row(registrationForm.agreeTerms) }}
+
+        <input class='lf--submit' type='submit' value='Register'>
+    {{ form_end(registrationForm) }}
+    </div>
+    </div>
+    
+{% endblock %}

@@ -1,0 +1,36 @@
+
+
+/* Full-width inputs */
+input[type=email], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+.lf--submit {
+    display: block;
+    padding: 1em;
+    width: 100%;
+    background:rebeccapurple;
+    border: 0;
+    color: #ee19c0;
+    cursor: pointer;
+    font-size: .75em;
+    font-weight: 600;
+    text-shadow: 0 1px 0 rgba(black, .2);
+      outline: none;
+      transition: transform .15s ease;
+      transform: scale(1.1);
+    }
+    .lf--forgot {
+        margin-top: 1em;
+        color:rebeccapurple;
+        font-size: .65em;
+        text-align: center;
+        position: relative;
+      }
+      

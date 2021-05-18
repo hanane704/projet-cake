@@ -1,0 +1,106 @@
+<nav class="navbar navbar-expand">
+  <div class="container-fluid">
+
+            <a class="navbar-brand" href="Acceuil.html"> 
+                 <div class="logo">
+                    <img src="image/bg_logo.gif" alt="Logo" loading="lazy" />
+                                
+              </div></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+        <li class="nav-item">
+            <a class="nav-link active" aria-current="page"href="{{ path('acceuil_index') }}" >Acceuil</a>
+        </li>
+        <li class="nav-item">
+        <a class="nav-link active" aria-current="page" href="{{ path('catalog_index') }}">Catalogue</a>
+    
+        </li>
+        {% if is_granted('ROLE_ADMIN') %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+           Espace Administrateur
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="{{ path('admin_cake_index') }}">Gestion des gâteaux</a></li>
+            <li><a class="dropdown-item" href="{{ path('admin_category_index') }}">Gestion des Categories</a></li>
+                  <li><a class="dropdown-item" href="{{ path('admin_order_index') }}">Gestion des Commandes</a></li>
+                     <li><a class="dropdown-item" href="{{ path('admin_ordered_quantity_index') }}">Gestion des quantités commandées</a></li>
+                        <li><a class="dropdown-item" href="{{ path('admin_receipe_index') }}">Gestion des Recettes</a></li>
+                           <li><a class="dropdown-item" href="{{ path('admin_user_index') }}">Gestion des utilisateurs</a></li>
+                           <li><a class="dropdown-item" href="{{ path('admin_payment_request_index') }}">Gestion des Paiments</a></li>
+          </ul>
+        </li>
+         {% endif %}
+        <li class="nav-item">
+         <a class="nav-link" href="{{ path( 'cart_index') }}">Mon panier</a>
+       
+        </li>
+      </ul>
+     </div>
+     </div>
+      <div class="navbar navbar-expand -fluid ">
+       
+         <a class="nav-link" href="{{ path( 'app_login') }}">SE connecter</a>
+     
+    </div>
+    </div>
+  </div>
+</nav> 
+  <section>
+                <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                    <ol class="carousel-indicators">
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"></li>
+                      <li data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="image/image_3.jpg" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Superbe gâteau </h5>
+                          <p>Vous souhaitez faire plaisir à un supporter ce gâteau est fait pour vous !!!</p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/image_15.jpg" class="d-block w-100" alt="photo">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Gâteaux à thèmes</h5>
+                          <p>Superbe gâteau </p>
+                        </div>
+                      </div>
+                      <div class="carousel-item">
+                        <img src="image/image_158.jpg" class="d-block w-100" alt="photo3">
+                        <div class="carousel-caption d-none d-md-block">
+                          <h5>Cupcakes</h5>
+                          <p>Vous souhaitez faire plaisir à un supporter ce Cupcakes est fait pour vous !!!</p>
+                        </div>
+                      </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </a>
+                  </div>
+                  </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
